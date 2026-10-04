@@ -1,4 +1,5 @@
 /* Section transitions keep all content visible, including without JavaScript. */
+html,body{overflow-x:clip}
 #about,#experience,#activities,#contact{position:relative;isolation:isolate}
 .chapter-divider{position:absolute;inset:0 0 auto;height:65px;overflow:hidden;pointer-events:none;z-index:0;color:#d29bb9}
 .chapter-divider svg{display:block;width:100%;height:65px;overflow:visible}
