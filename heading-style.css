@@ -1,0 +1,44 @@
+/* CHỈNH TIÊU ĐỀ: đổi các giá trị dưới đây, giữ nguyên tên biến và dấu ; */
+:root{
+  --heading-main:#79495f; /* Màu dòng chính: mận hồng trầm */
+  --heading-accent:#aa456d; /* Màu chữ nghiêng: hồng rose */
+  --heading-soft:#e8b9cd; /* Màu nét nhấn nhẹ phía dưới */
+  --heading-size:68px; /* Cỡ tiêu đề lớn nhất trên máy tính */
+}
+/* Fraunces đã có sẵn bản thường/italic và đầy đủ dấu tiếng Việt. */
+.section-heading h2.expressive-title,.contact-copy h2.expressive-title{
+  font-family:var(--serif);font-weight:400;font-size:clamp(44px,4.8vw,var(--heading-size));
+  line-height:1.16;letter-spacing:-.045em;color:var(--heading-main);white-space:normal;
+  font-variation-settings:'SOFT' 70,'WONK' 1,'opsz' 72;
+}
+.section-heading h2.expressive-title:first-letter{color:inherit}
+.expressive-title .title-line{display:block;width:fit-content;max-width:100%;position:relative;padding-block:.03em;overflow-wrap:normal}
+.expressive-title .title-accent{
+  font-family:var(--serif);font-weight:400;font-style:italic;font-size:1.07em;
+  color:var(--heading-accent);letter-spacing:-.04em;line-height:1.14;
+  padding-left:.28em;margin-top:.01em;padding-bottom:.14em;
+  font-variation-settings:'SOFT' 65,'WONK' 1,'opsz' 72;
+}
+.expressive-title .title-accent:after{
+  content:'';position:absolute;left:.32em;bottom:.035em;width:68%;height:.14em;
+  border-bottom:2px solid var(--heading-soft);border-radius:50%;transform:rotate(-3deg);opacity:.85;pointer-events:none;
+}
+.contact-copy h2.expressive-title .title-arrow{
+  position:absolute;right:-.78em;top:1.25em;color:#c58ca8;font-family:var(--sans);
+  font-size:.48em;margin:0;animation:none;transform:rotate(-8deg);
+}
+.contact-copy h2.expressive-title{position:relative;width:fit-content;max-width:calc(100% - 38px)}
+.hero h1{font-weight:400;letter-spacing:-.055em;line-height:1.1;color:var(--heading-main);font-variation-settings:'SOFT' 70,'WONK' 1,'opsz' 96}
+.hero h1 .name-first{color:var(--heading-main)}
+.hero h1 em{color:var(--heading-accent);font-weight:400;font-variation-settings:'SOFT' 65,'WONK' 1,'opsz' 96;position:relative;width:fit-content;padding-bottom:.09em}
+.hero h1 em:after{content:'';position:absolute;left:36px;bottom:.02em;width:63%;height:.09em;border-bottom:2px solid var(--heading-soft);border-radius:50%;transform:rotate(-4deg);pointer-events:none}
+.hero .title-dot{color:#c69576;animation:none}
+.experience-card h3,.activity-detail h3{font-family:var(--serif);font-weight:400;letter-spacing:-.025em;line-height:1.25;color:var(--heading-main);font-variation-settings:'SOFT' 65,'WONK' 1,'opsz' 48}
+@media(max-width:1100px){.section-heading h2.expressive-title,.contact-copy h2.expressive-title{font-size:clamp(43px,5.2vw,58px)}}
+@media(max-width:640px){
+  .section-heading h2.expressive-title,.contact-copy h2.expressive-title{font-size:clamp(38px,9.8vw,49px);line-height:1.17;letter-spacing:-.035em}
+  .expressive-title .title-accent{padding-left:.2em;letter-spacing:-.03em}
+  .expressive-title .title-accent:after{left:.24em;border-bottom-width:1.5px}
+  .contact-copy h2.expressive-title .title-arrow{right:-.65em}
+  .hero h1 em:after{left:30px}
+}
